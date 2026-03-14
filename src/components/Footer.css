@@ -1,5 +1,6 @@
 .footer {
-    background: white;
+    background: var(--color-surface);
+    /* Update for dark mode */
     border-top: 1px solid rgba(255, 42, 133, 0.2);
     padding-bottom: 2rem;
 }

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
+import profileImg from '../assets/profile.jpg';
 import './Hero.css';
 
 const Hero = () => {
@@ -35,7 +36,7 @@ const Hero = () => {
                     >
                         Gayani Chinthika
                         <span className="block text-primary gradient-text" style={{ display: 'block', marginTop: '0.5rem' }}>
-                            IT Undergraduate
+                            Full Stack Engineer
                         </span>
                     </motion.h1>
 
@@ -45,8 +46,7 @@ const Hero = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.7, duration: 0.8 }}
                     >
-                        Passionate about crafting beautiful, elegant, and user-centric digital experiences.
-                        Transforming ideas into seamless web applications.
+                        Passionate about building scalable, high-performance web applications and crafting elegant digital experiences from front-end to back-end.
                     </motion.p>
 
                     <motion.div
@@ -70,10 +70,9 @@ const Hero = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.6, duration: 1 }}
                 >
-                    <div className="hero-image-container glass-panel">
-                        {/* Using a placeholder gradient/abstract shape for elegant feminine vibe, but it can be replaced with a real photo */}
-                        <div className="hero-image-placeholder">
-                            <span className="sparkle ✨">✨</span>
+                    <div className="animated-frame">
+                        <div className="hero-image-container glass-panel">
+                            <img src={profileImg} alt="Gayani Chinthika" className="hero-image" />
                         </div>
                     </div>
                 </motion.div>

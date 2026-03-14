@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Heart, Star, Sparkles } from 'lucide-react';
+import profileImg from '../assets/profile.jpg';
 import './About.css';
 
 const About = () => {
@@ -32,9 +33,8 @@ const About = () => {
                     >
                         <div className="about-image-wrapper">
                             <div className="about-image-bg"></div>
-                            {/* Placeholder for an elegant profile picture */}
                             <div className="about-image glass-panel">
-                                <Sparkles size={48} className="text-secondary" style={{ opacity: 0.5 }} />
+                                <img src={profileImg} alt="Profile" className="about-profile-img" />
                             </div>
 
                             <motion.div

@@ -34,7 +34,7 @@ const Skills = () => {
     ];
 
     return (
-        <section id="skills" className="section-padding" style={{ background: 'linear-gradient(180deg, var(--color-bg) 0%, #fff0f5 100%)' }}>
+        <section id="skills" className="section-padding">
             <div className="container">
                 <motion.div
                     className="section-header"
