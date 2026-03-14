@@ -68,7 +68,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4>Email</h4>
-                                    <p>hello@gayanichinthika.dev</p> {/* Placeholder */}
+                                    <p>gcsapumohotti@gmail.com</p> {/* Placeholder */}
                                 </div>
                             </div>
 
@@ -78,7 +78,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4>Phone</h4>
-                                    <p>+94 77 123 4567</p> {/* Placeholder */}
+                                    <p>+94 74 0800486</p> {/* Placeholder */}
                                 </div>
                             </div>
 
@@ -88,16 +88,16 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4>Location</h4>
-                                    <p>Colombo, Sri Lanka</p>
+                                    <p>Matara, Sri Lanka</p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="social-links">
-                            <a href="#" className="social-link" aria-label="LinkedIn">
+                            <a href="linkedin.com/in/gayani-chinthika-008565370" className="social-link" aria-label="LinkedIn">
                                 <Linkedin size={20} />
                             </a>
-                            <a href="#" className="social-link" aria-label="GitHub">
+                            <a href="github.com/gcsapumohotti" className="social-link" aria-label="GitHub">
                                 <Github size={20} />
                             </a>
                             <a href="#" className="social-link" aria-label="Instagram">
