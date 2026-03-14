@@ -1,56 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 :root {
-  /* Modern Dark Theme with Vibrant Accents */
-  --color-bg: #0f0f13;
-  /* Deep dark background */
-  --color-surface: #1a1a24;
-  /* Slightly lighter for cards */
-  --color-primary: #ff2a85;
-  /* Vibrant Pink */
-  --color-primary-dark: #e01b6e;
-  /* Deep Pink */
-  --color-secondary: #9d4edd;
-  /* Vibrant Purple */
-  --color-accent: #ff9e00;
-  /* Vibrant Orange/Gold */
-
-  /* Update text colors for dark mode */
-  --color-text-main: #f8f9fa;
-  /* Off-white for high contrast */
-  --color-text-muted: #adb5bd;
-  /* Light grey for secondary text */
-  --color-gold: #ffb703;
-
-  /* Typography */
+  /* Common variables */
   --font-sans: 'Outfit', sans-serif;
   --font-serif: 'Playfair Display', serif;
-
-  /* Layout & Spacing */
   --max-width: 1200px;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
   --spacing-xl: 4rem;
-
-  /* Shadows & Effects (optimized for dark mode) */
-  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 8px 30px rgba(255, 42, 133, 0.15);
-  /* Subtle pink glow */
-  --glass-bg: rgba(26, 26, 36, 0.6);
-  /* Dark glass */
-  --glass-border: 1px solid rgba(255, 255, 255, 0.08);
-
-  /* Border Radius */
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-full: 9999px;
-
-  /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
+}
+
+[data-theme='dark'], :root:not([data-theme='light']) {
+  --color-bg: #0f0f13;
+  --color-surface: #1a1a24;
+  --color-primary: #ff2a85;
+  --color-primary-dark: #e01b6e;
+  --color-secondary: #9d4edd;
+  --color-accent: #ff9e00;
+  --color-text-main: #f8f9fa;
+  --color-text-muted: #adb5bd;
+  --color-gold: #ffb703;
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 30px rgba(255, 42, 133, 0.15);
+  --glass-bg: rgba(26, 26, 36, 0.6);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+  --color-heading: #ffffff;
+}
+
+[data-theme='light'] {
+  --color-bg: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-primary: #ff2a85;
+  --color-primary-dark: #e01b6e;
+  --color-secondary: #7b2cbf;
+  --color-accent: #f3722c;
+  --color-text-main: #212529;
+  --color-text-muted: #495057;
+  --color-gold: #f9c74f;
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: 1px solid rgba(0, 0, 0, 0.05);
+  --color-heading: #0f0f13;
 }
 
 * {
@@ -67,6 +66,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -78,8 +78,7 @@ h6 {
   font-family: var(--font-serif);
   font-weight: 600;
   line-height: 1.2;
-  color: #ffffff;
-  /* Ensure headers are white in dark mode */
+  color: var(--color-heading);
 }
 
 h1 {

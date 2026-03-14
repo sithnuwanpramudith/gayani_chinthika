@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ theme, toggleTheme }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -46,16 +47,24 @@ const Navbar = () => {
                                 </a>
                             </li>
                         ))}
+                        <li>
+                            <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+                        </li>
                     </ul>
                 </nav>
 
-                {/* Mobile Menu Toggle */}
-                <button
-                    className="mobile-toggle"
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >
-                    {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                </button>
+                <div className="nav-actions">
+                    <div className="mobile-theme-toggle">
+                        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+                    </div>
+                    {/* Mobile Menu Toggle */}
+                    <button
+                        className="mobile-toggle"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    >
+                        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Nav */}
