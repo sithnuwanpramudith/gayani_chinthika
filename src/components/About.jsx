@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { Heart, Star, Sparkles } from 'lucide-react';
-import profileImg from '../assets/profile.jpg';
+import { Heart } from 'lucide-react';
 import './About.css';
 
 const About = () => {
@@ -24,39 +23,6 @@ const About = () => {
                 </motion.div>
 
                 <div className="about-content">
-                    <motion.div
-                        className="about-image-side"
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, margin: "-100px" }}
-                        variants={fadeInUp}
-                    >
-                        <div className="about-image-wrapper">
-                            <div className="about-image-bg"></div>
-                            <div className="about-image glass-panel">
-                                <img src={profileImg} alt="Profile" className="about-profile-img" />
-                            </div>
-
-                            <motion.div
-                                className="floating-badge badge-1 glass-panel"
-                                animate={{ y: [0, -10, 0] }}
-                                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                            >
-                                <Heart size={20} className="badge-icon" />
-                                <span>Passionate Coder</span>
-                            </motion.div>
-
-                            <motion.div
-                                className="floating-badge badge-2 glass-panel"
-                                animate={{ y: [0, 10, 0] }}
-                                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                            >
-                                <Star size={20} className="badge-icon" />
-                                <span>Creative Thinker</span>
-                            </motion.div>
-                        </div>
-                    </motion.div>
-
                     <motion.div
                         className="about-text-side"
                         initial="hidden"
